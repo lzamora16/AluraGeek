@@ -24,6 +24,7 @@ const createProducts = (name, price, image) => {
             timer: 2000
         });
 
+        console.log("URL ACTUAL: ", window.location.href);
         setTimeout(() => {
             window.location.href = "/index.html"
         }, 2300);
