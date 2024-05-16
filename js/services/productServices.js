@@ -41,7 +41,7 @@ const deleteProducts = (id) =>{
             res.json()
             
             setTimeout(() => {
-                window.location.href = "https://lzamora16.github.io/AluraGeek/index.html";
+                window.location.href = "../../index.html";
             }, 2300);
         })
         .catch((err) => console.log(err))
