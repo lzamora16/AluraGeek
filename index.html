@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek</title>
+    <link rel="icon" href="img/venta.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/4c2df8bc84.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header class="header-Alura">
+        <p class="header-Alura-texto">♥♥♥ AluraGeek</p>
+    </header>
+    <div class="wrapper">
+        <main class="productos">
+            <div class="mostrarProductos">
+                <h3 class="mostrarProductos-titulo">Mis Productos: </h3>
+                <div class="contenedores" data-contenedores>
+                    
+                </div>
+            </div>
+            <div class="formularioProductos">
+                <h3 class="formularioProductos-titulo">Agregar Productos: </h3>
+                <form class="formulario" action="" data-enviar>
+                    <input class="formulario-input" name="nombre" type="text" placeholder="Nombre..." data-nombre>
+                    <input class="formulario-input" name="precio" type="text" placeholder="Precio..." data-precio>
+                    <input class="formulario-input" name="imagen" type="text" placeholder="Imagen..." data-imagen>
+                    <div class="btnFormulario">
+                        <div class="btnEnviar">
+                            <input class="btn" type="submit" value="Enviar"> 
+                            <i class="fa-solid fa-right-to-bracket"></i>   
+                        </div>
+                        <div class="btnLimpiar">
+                            <input class="btn" type="reset" value="Limpiar">
+                            <i class="fa-solid fa-eraser"></i>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <h3>AluraGeek</h3>
+        <p>DESARROLLADO POR LUDWING ZAMORA</p>
+        <p>ALURA LATAM - 2024</p>
+    </footer>
+<script type="module" src="./js/controllers/main.js"></script>
+</body>
+</html>

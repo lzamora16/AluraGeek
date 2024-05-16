@@ -1,0 +1,259 @@
+body{
+    /* Definimos un gradiente lineal que va desde arriba hacia abajo */
+    background: linear-gradient(to bottom, #24282A, #4C2A36);
+    /* Fijamos el tamaño del fondo para que cubra toda la ventana */
+    background-size: cover;
+    /* Centramos el fondo */
+    background-position: center;
+    /* Fijamos la imagen de fondo para que no se repita */
+    background-repeat: no-repeat;
+}
+.header-Alura {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-Alura-texto {
+    font-size: 2rem;
+    color: white;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ajuste para que el wrapper ocupe toda la altura de la ventana */
+}
+
+.productos {
+    display: flex;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.mostrarProductos {
+    /* background-color: aqua; */
+    height: auto; /* Cambiado a auto para que el contenedor crezca según su contenido */
+    width: 60%;
+    padding-left: 2%;
+    /* overflow-y: auto; Agregado desplazamiento vertical si el contenido es demasiado largo */
+}
+
+.mostrarProductos-titulo, .formularioProductos-titulo {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.contenedores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: auto;
+    overflow-y: auto;
+}
+
+.noProductos{
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+/* Estilos para la barra de desplazamiento */
+.contenedores::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+.contenedores::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo de la pista de la barra de desplazamiento */
+}
+
+.contenedores::-webkit-scrollbar-thumb {
+    background: #888; /* Color del pulgar de la barra de desplazamiento */
+    border-radius: 4px; /* Radio de borde del pulgar de la barra de desplazamiento */
+}
+
+.contenedores::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color del pulgar de la barra de desplazamiento al pasar el mouse sobre él */
+}
+
+.card {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: #FFFFFF solid;
+    border-radius: 10px;
+    height: 250px;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.card-img {
+    width: 90%;
+    height: 150px;
+    background-size: cover;
+    border: #FFFFFF solid 3px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.card-title {
+    width: 90%;
+    display: flex;
+    font-size: 1rem;
+    color: #FFFFFF;
+    margin-top: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-body {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    font-size: 1.3rem;
+    color: #FFFFFF;
+}
+
+.card-body i{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(195, 37, 26, 0.6);
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+}
+
+
+
+.formularioProductos {
+    /* background-color: blueviolet; */
+    height: auto; /* Cambiado a auto para que el contenedor crezca según su contenido */
+    width: 40%;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.formulario-input {
+    margin: 10px;
+    width: 80%;
+    border: #333333 solid;
+    height: 30px;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: #333333;
+    color: white;
+    font-size: 1.2rem;
+    margin-left: 6px;
+}
+
+
+.formulario-input::placeholder {
+    color: white;
+    margin-left: 6px;
+}
+
+.formulario-input:focus{
+    outline: #333333;
+    margin-left: 6px;
+}
+
+.btnFormulario {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    gap: 10px;
+    margin: 1rem;
+}
+
+.btnEnviar, .btnLimpiar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 50%;
+    border-radius: 40px;
+    height: 50px;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.btnEnviar {
+    background: linear-gradient(to right, #E0324B, #FF4500);
+    color: white;
+}
+
+.btnLimpiar {
+    background: #E0E0E0;
+    color: #03318C;
+}
+
+.btn{
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.footer {
+    height: 130px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto; /* Ajuste para que el footer siempre esté en la parte inferior */
+}
+
+@media only screen and (max-width: 600px){
+    .header-Alura{
+        height: 50px;
+    }
+
+    .productos{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .noProductos{
+        font-size: 1.5rem;
+    }
+
+    .mostrarProductos{
+        width: 100%;
+    }
+
+    .formularioProductos{
+        width: 100%;
+    }
+    
+    .contenedores{
+        width: 96%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card{
+        width: 42%;
+    }
+}
