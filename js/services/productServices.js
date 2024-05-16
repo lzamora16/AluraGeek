@@ -25,7 +25,7 @@ const createProducts = (name, price, image) => {
         });
 
         setTimeout(() => {
-            window.location.href = "../index.html";
+            window.location.href = "/index.html";
         }, 2300);
     })
     .catch((err) => console.log(err));
@@ -41,7 +41,7 @@ const deleteProducts = (id) =>{
             res.json()
             
             setTimeout(() => {
-                window.location.href = "../index.html";
+                window.location.href = "/index.html";
             }, 2300);
         })
         .catch((err) => console.log(err))
