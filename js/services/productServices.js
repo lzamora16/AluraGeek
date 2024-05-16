@@ -24,9 +24,8 @@ const createProducts = (name, price, image) => {
             timer: 2000
         });
 
-        console.log("URL ACTUAL: ", window.location.href);
         setTimeout(() => {
-            window.location.href = "/index.html"
+            window.location.href = "AluraGeek/index.html"
         }, 2300);
     })
     .catch((err) => console.log(err));
@@ -42,7 +41,7 @@ const deleteProducts = (id) =>{
             res.json()
             
             setTimeout(() => {
-                window.location.href = "/index.html"
+                window.location.href = "AluraGeek/index.html"
             }, 2300);
         })
         .catch((err) => console.log(err))
