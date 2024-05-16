@@ -80,11 +80,22 @@ formulario.addEventListener('submit', (e)=>{
     const precio = document.querySelector("[data-precio]").value;
     const imagen = document.querySelector("[data-imagen]").value;
 
-    if (nombre.trim() === '' || precio.trim() === '' || imagen.trim() === '' ) {
+    if (nombre.trim() === '' || precio === '' || imagen.trim() === '' ) {
         Swal.fire({
             position: "top-end",
             icon: "error",
             title: `Todos los campos son necesarios`,
+            showConfirmButton: false,
+            timer: 2000
+        });
+        return;
+    }
+
+    if(!parseInt(precio)){
+        Swal.fire({
+            position: "top-end",
+            icon: "warning",
+            title: `Debe de ingresar un valor númerico en el campo precio`,
             showConfirmButton: false,
             timer: 2000
         });
